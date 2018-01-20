@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>timetracker</title>
+  <link rel="stylesheet" href="./css/main.min.css">
+  <script src="./js/vue.js" charset="utf-8"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <h2 class="header__title">
+        urTimeTracker
+      </h2>
+    </div>
+  </header>
+
+  <main class="maincontent">
+    <div class="container">
+      <div id="timers" class="timers">
+        <div class="timers__create-block">
+          <input
+            type="text"
+            placeholder="Enter title"
+            class="timers__input" v-model="inputTitle" v-on:keyup.enter="addTimer(inputTitle)"
+          >
+          <button
+            class="timers__btn-create"
+            v-on:click="addTimer(inputTitle)"
+          >create</button>
+        </div>
+          <ul class="timers__list">
+            <li class="timers__item" v-for="(timer, index) in arrTimers">
+              <button
+                class="timers__btn timers__btn--start"
+                v-on:click="start(timer)"
+              >
+                <i class="material-icons"
+                :bind="timer.stopTime
+                ? timer.name='play_arrow'
+                : timer.name='pause'">{{timer.name}}</i>
+              </button>
+              <div class="timers__time">{{timer.screenTime}}</div>
+              <!-- <h3 class="timers__title">{{timer.title}}</h3> -->
+              <input type="text" class="timers__title" value="timer.title" v-model="timer.title">
+              <button
+                class="timers__btn timers__btn--delete"
+                v-on:click="del(index)">
+                  <i class="material-icons">delete</i>
+                </button>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      by dmn1024
+    </div>
+  </footer>
+  <script src="./js/main.js" charset="utf-8"></script>
+</body>
+</html>

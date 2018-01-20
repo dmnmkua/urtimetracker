@@ -1,0 +1,128 @@
+.maincontent {
+  padding: 15px 0;
+}
+
+.timers__create-block {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  max-width: 500px;
+}
+
+.timers__input {
+  width: 70%;
+  padding: 5px 10px;
+  border: none;
+  color: #009688;
+  border-bottom: 1px solid #009688;
+}
+
+.timers__btn-create {
+  width: 30%;
+  color: #009688;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  border: 1px solid #009688;
+  transition: .3s;
+
+  &:hover,
+  &:focus {
+    background: #009688;
+    color: #fff;
+  }
+}
+
+.timers__list {
+  margin: 0;
+  padding: 50px 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.timers__item {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  background: #009688;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid  #fff;
+
+  @media screen and (max-width: 500px) {
+    flex-wrap: wrap;
+  }
+}
+
+.timers__title {
+  margin: 0;
+  padding: 0 10px;
+  text-transform: uppercase;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: none;
+  background: none;
+  color: #fff;
+
+  @media screen and (max-width: 500px) {
+    order: 0;
+    width: 100%;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.timers__time {
+  width: 100px;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  @media screen and (max-width: 500px) {
+    order: 1;
+  }
+}
+
+.timers__btn {
+  background: none;
+  border: none;
+  width: 30px;
+  text-transform: uppercase;
+  transition: .1s;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+  flex-shrink: 0;
+
+  i {
+    color: #fff;
+  }
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+  }
+
+  @media screen and (max-width: 500px) {
+    order: 1;
+  }
+}
