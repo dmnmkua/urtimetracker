@@ -83,6 +83,9 @@ gulp.task('build', ['clean', 'css'], () => {
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
 
+  const vueJs = gulp.src('src/js/vue.js')
+    .pipe(gulp.dest('dist/js'));
+
   const bHtml = gulp.src('src/index.html')
     .pipe(gulp.dest('dist'))
 });
