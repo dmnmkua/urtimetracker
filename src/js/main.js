@@ -10,7 +10,7 @@ let timer = new Vue({
   methods: {
     addTimer(title) {
       let objTimer = {
-        'title': title,
+        'title': title || 'timer',
         'count': 0,
         'screenTime': `0 : 00 : 00`,
         'stopTime': true,

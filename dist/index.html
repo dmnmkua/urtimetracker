@@ -25,7 +25,9 @@
           <input
             type="text"
             placeholder="Enter title"
-            class="timers__input" v-model="inputTitle" v-on:keyup.enter="addTimer(inputTitle)"
+            class="timers__input"
+            v-model="inputTitle"
+            v-on:keyup.enter="addTimer(inputTitle)"
           >
           <button
             class="timers__btn-create"
