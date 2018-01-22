@@ -61,6 +61,14 @@
   }
 }
 
+.list-enter-active, .list-leave-active {
+  transition: all .5s;
+}
+.list-enter, .list-leave-to /* .list-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
 .timers__title {
   margin: 0;
   padding: 0 10px;

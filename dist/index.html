@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>timetracker</title>
+  <link rel="shortcut icon" type="image/x-icon" href="./img/ic_timer_black_24px.svg">
   <link rel="stylesheet" href="./css/main.min.css">
   <script src="./js/vue.js" charset="utf-8"></script>
 </head>
@@ -34,8 +35,8 @@
             v-on:click="addTimer(inputTitle)"
           >create</button>
         </div>
-          <ul class="timers__list">
-            <li class="timers__item" v-for="(timer, index) in arrTimers">
+          <transition-group class="timers__list" tag="ul" name="list">
+            <li class="timers__item" v-for="(timer, index) in arrTimers" :key="timer.id">
               <button
                 class="timers__btn timers__btn--start"
                 v-on:click="start(timer)"
@@ -53,7 +54,7 @@
                   <i class="material-icons">delete</i>
                 </button>
             </li>
-          </ul>
+          </transition-group>
       </div>
     </div>
   </main>
